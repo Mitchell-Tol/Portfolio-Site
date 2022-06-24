@@ -1,5 +1,9 @@
 import { Controller } from "./controller.js";
 
+/**
+ * Controls the projects page.
+ * @author Mitchell Tol
+ */
 export class ProjectsController extends Controller {
     #view;
 

@@ -14,7 +14,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 30px;
-    background: #282B30;
+    background-color: #282B30;
     color: #EDEDED;
 }
 
@@ -29,11 +29,12 @@ nav {
 main {
     min-height: 93vh;
     background-color: #494949;
-    background: url("../img/bg-code.jpg");
+    background-image: url("../img/bg-code.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     color: #EDEDED;
+    transition: background-image 0.5s;
 }
 
 @media only screen and (max-aspect-ratio: 3/4) {

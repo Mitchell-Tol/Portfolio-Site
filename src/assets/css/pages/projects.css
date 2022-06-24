@@ -1,1 +1,29 @@
 /* Stylesheet for projects page. */
+.project-list-container {
+    padding-top: 15vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-container {
+    width: 30vw;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    background-color: #282B30;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.project-title {
+    font-size: 30px;
+}
+
+.project-image {
+    border-radius: 10px;
+}
+
+.project-description {
+    font-size: 18px;
+}
