@@ -43,7 +43,7 @@ export class App {
                 break;
 
             case "projects":
-                new ProjectsController;
+                new ProjectsController();
                 break;
 
             default:

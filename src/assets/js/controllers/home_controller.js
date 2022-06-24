@@ -20,7 +20,7 @@ export class HomeController extends Controller {
      * Initializes the main.
      */
     async #initializeView() {
-        this.#view = await (super.getHtmlFromFile("./src/html/pages/welcome.html"));
+        this.#view = await (super.getHtmlFromFile("./src/html/pages/home.html"));
         super.setMain(this.#view);
     }
 }
