@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: century-gothic, sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: #282B30;
+    color: #EDEDED;
+}
+
+.nav-link {
+    margin-inline: 10px;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-aspect-ratio: 3/4) {
+    nav {
+        font-size: 30px;
+    }
+}
