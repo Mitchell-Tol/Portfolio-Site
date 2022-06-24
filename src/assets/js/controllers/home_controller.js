@@ -1,6 +1,6 @@
 import { Controller } from "./controller.js";
 
-export class WelcomeController extends Controller {
+export class HomeController extends Controller {
     #view;
 
     constructor(firstTimeSetup) {

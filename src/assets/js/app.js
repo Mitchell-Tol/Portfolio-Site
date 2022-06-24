@@ -1,8 +1,8 @@
-import { WelcomeController } from "./controllers/welcome_controller.js";
+import { HomeController } from "./controllers/home_controller.js";
 
 export class App {
     constructor() {
-        App.loadPage("welcome", true)
+        App.loadPage("home", true)
     }
 
     static loadPage(name, firstTimeSetup) {
@@ -19,12 +19,12 @@ export class App {
 
     static #loadController(name, firstTimeSetup) {
         switch (name) {
-            case "welcome":
-                new WelcomeController(firstTimeSetup);
+            case "home":
+                new HomeController(firstTimeSetup);
                 break;
 
             default:
-                new WelcomeController(firstTimeSetup);
+                new HomeController(firstTimeSetup);
                 break;
         }
     }
