@@ -1,11 +1,8 @@
 /* Styling for the welcome page. */
 .front-message {
     padding-top: 33vh;
-    height: 93vh;
-    background-color: #494949;
+    min-height: 93vh;
     background: url("../../img/bg-code.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;

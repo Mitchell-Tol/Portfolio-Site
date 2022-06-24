@@ -26,6 +26,14 @@ nav {
     cursor: pointer;
 }
 
+main {
+    min-height: 93vh;
+    background-color: #494949;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #EDEDED;
+}
+
 @media only screen and (max-aspect-ratio: 3/4) {
     nav {
         font-size: 30px;

@@ -1,4 +1,5 @@
 import { HomeController } from "./controllers/home_controller.js";
+import { ProjectsController } from "./controllers/projects_controller.js";
 
 /**
  * The code that runs when the page loads.
@@ -39,6 +40,10 @@ export class App {
         switch (name) {
             case "home":
                 new HomeController(firstTimeSetup);
+                break;
+
+            case "projects":
+                new ProjectsController;
                 break;
 
             default:
