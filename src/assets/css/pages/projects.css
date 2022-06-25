@@ -7,8 +7,8 @@
 }
 
 .project-container {
+    aspect-ratio: 1;
     width: 30vw;
-    max-width: 420px;
     display: flex;
     flex-direction: column;
     background-color: #282B30;
