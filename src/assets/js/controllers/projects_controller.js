@@ -1,4 +1,5 @@
 import { Controller } from "./controller.js";
+import { NetworkManager } from "../networkManager.js";
 
 /**
  * Controls the projects page.
@@ -21,5 +22,14 @@ export class ProjectsController extends Controller {
      async #initializeView() {
         this.#view = await (super.getHtmlFromFile("./src/html/pages/projects.html"));
         super.setMain(this.#view);
+
+        this.#loadProjects();
+    }
+
+    async #loadProjects() {
+        const projects = await NetworkManager.doRequest("/project", "GET");
+        projects.forEach(project => {
+            console.log(project);
+        });
     }
 }
