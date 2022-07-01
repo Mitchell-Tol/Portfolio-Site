@@ -2,9 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My personal portfolio website",
-  "main": "src/assets/js/app.js",
+  "main": "src/assets/js/server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon src/assets/js/server/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/Mitchell-Tol/Portfolio-Site#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.18"
   }
 }
