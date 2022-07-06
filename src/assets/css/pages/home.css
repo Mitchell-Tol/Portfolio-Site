@@ -1,12 +1,6 @@
-/* Styling for the welcome page. */
 .front-message {
     padding-top: 33vh;
-    height: 93vh;
-    background-color: #494949;
-    background: url("../../img/bg-code.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    min-height: 93vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +17,7 @@
         font-size: 75px;
     }
 
-    .front-message > h3 {
+    .front-message > h2 {
         font-size: 50px;
     }
 }
