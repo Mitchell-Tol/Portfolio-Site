@@ -27,6 +27,9 @@ export class ProjectsController extends Controller {
         super.setMain(this.#view);
     }
 
+    /**
+     * Loads projects from database into DOM.
+     */
     async #loadProjects() {
         const projects = await NetworkManager.doRequest("/project", "GET");
         const template = this.#view.querySelector(".project-container-template");

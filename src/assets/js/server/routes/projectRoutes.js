@@ -3,6 +3,11 @@ let ProjectRoutes = class {
     #app
     #connection
 
+    /**
+     * Constructor.
+     * @param { function } app The express app.
+     * @param { object } connection The mysql connection.
+     */
     constructor(app, connection) {
         this.#route = "/project"
         this.#app = app;
@@ -11,6 +16,9 @@ let ProjectRoutes = class {
         this.getProjects();
     }
 
+    /**
+     * Runs a SELECT query when the route is contacted.
+     */
     getProjects() {
         this.#app.get(this.#route, (req, res) => {
             this.#connection.query({

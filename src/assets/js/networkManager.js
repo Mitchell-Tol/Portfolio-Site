@@ -1,6 +1,17 @@
+/**
+ * Communicates to the routes using HTTP requests.
+ * @author Mitchell Tol
+ */
 export class NetworkManager {
     static portNumber = 3000;
 
+    /**
+     * Performs an HTTP request.
+     * @param { String } route The route to contact.
+     * @param { String } method The HTTP method (GET, POST, PUT, DELETE).
+     * @param { JSON } data The data to give to the HTTP request.
+     * @returns
+     */
     static async doRequest(route, method, data) {
         const url = `${location.protocol}//${location.hostname}:${NetworkManager.portNumber}${route}`;
         switch (method) {
