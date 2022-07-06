@@ -1,7 +1,7 @@
 export class NetworkManager {
     static portNumber = 3000;
 
-    static async doRequest(route, method) {
+    static async doRequest(route, method, data) {
         const url = `${location.protocol}//${location.hostname}:${NetworkManager.portNumber}${route}`;
         switch (method) {
             case "GET":

@@ -21,15 +21,20 @@ export class ProjectsController extends Controller {
      */
      async #initializeView() {
         this.#view = await (super.getHtmlFromFile("./src/html/pages/projects.html"));
-        super.setMain(this.#view);
+        await this.#loadProjects();
 
-        this.#loadProjects();
+        // The view gets put as the main.
+        super.setMain(this.#view);
     }
 
     async #loadProjects() {
         const projects = await NetworkManager.doRequest("/project", "GET");
+        const template = this.#view.querySelector(".project-container-template");
         projects.forEach(project => {
-            console.log(project);
+            const projectElement = template.content.cloneNode(true);
+            projectElement.querySelector(".project-title").innerText = project.title;
+            projectElement.querySelector(".project-description").innerText = project.description;
+            this.#view.querySelector(".project-list-container").appendChild(projectElement);
         });
     }
 }
