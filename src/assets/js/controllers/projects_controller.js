@@ -33,6 +33,7 @@ export class ProjectsController extends Controller {
         projects.forEach(project => {
             const projectElement = template.content.cloneNode(true);
             projectElement.querySelector(".project-title").innerText = project.title;
+            projectElement.querySelector(".project-image").src = `./src/assets/img/pages/projects/${project.name}.png`; //Adding an image for a project is necessary (PNG).
             projectElement.querySelector(".project-description").innerText = project.description;
             this.#view.querySelector(".project-list-container").appendChild(projectElement);
         });
