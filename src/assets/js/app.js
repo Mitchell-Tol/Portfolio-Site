@@ -1,5 +1,6 @@
 import { HomeController } from "./controllers/home_controller.js";
 import { ProjectsController } from "./controllers/projects_controller.js";
+import { AboutMeController } from "./controllers/about_me_controller.js";
 
 /**
  * The code that runs when the page loads.
@@ -45,6 +46,10 @@ export class App {
 
             case "projects":
                 new ProjectsController();
+                return true;
+
+            case "about-me":
+                new AboutMeController();
                 return true;
 
             default:

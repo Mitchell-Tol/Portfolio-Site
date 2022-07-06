@@ -19,7 +19,7 @@ export class ProjectsController extends Controller {
     /**
      * Initializes the main.
      */
-     async #initializeView() {
+    async #initializeView() {
         this.#view = await (super.getHtmlFromFile("./src/html/pages/projects.html"));
         await this.#loadProjects();
 
